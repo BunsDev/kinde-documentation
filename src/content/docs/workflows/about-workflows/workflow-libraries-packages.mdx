@@ -1,0 +1,30 @@
+---
+page_id: 3d701e6c-8b2a-49f5-a0e6-8596acad89a1
+title: Workflow libraries and packages
+sidebar:
+  order: 4
+relatedArticles:
+  - f39276ef-78d1-405d-a3c0-d587c148414a
+  - d672fca7-6c6a-49f8-85c9-6e86ce99f440
+  - 8554d648-fc2f-4ef9-aaa9-4f27b3c05205 
+---
+
+As part of bringing your own code to workflows, you'll likely need to work with some `npm` libraries in addition to the `@kinde/infrastructure` package.
+
+Kinde supports a handful of carefully selected libraries from `npm`. These include:
+
+`@kinde/infrastructure`
+
+This is Kinde’s package that supplies helpers and methods to give you the best possible authoring experience of workflows.
+
+For server side React templates:
+
+`react` and `react-dom/server.browser`
+
+For Liquid templates:
+
+`liquidjs`
+
+Attempting to import unsupported packages into your runtime code will result in your deployment failing. 
+
+Dev dependencies (e.g packages used for linting, tests and build steps) can be used, as they do not affect the Kinde runtime environment. Any code dependent on these packages should be prebuilt before deploying to Kinde.
